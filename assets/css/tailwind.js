@@ -127,6 +127,11 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
+
+  'seeker-beige': '#20AA6E',
+  'seeker-tan': '#98DDBF',
+  'seeker-dark-purple': '#3C2D3C',
+  'seeker-metallic-blue': '#5F5862'
 }
 
 module.exports = {

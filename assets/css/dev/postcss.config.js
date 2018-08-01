@@ -10,5 +10,6 @@ module.exports = {
       path: ['assets/css'],
     }),
     require('tailwindcss')('./assets/css/tailwind.js'),
+    require('postcss-nested')
   ]
 }

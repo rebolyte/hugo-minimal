@@ -8,8 +8,9 @@ module.exports = {
   plugins: [        
     require('postcss-import')({
       path: ['assets/css'],
-    }), 
+    }),
     require('tailwindcss')('./assets/css/tailwind.js'),
+    require('postcss-nested'),
     require('@fullhuman/postcss-purgecss')({
       content: ['layouts/**/*.html'],
       extractors: [
