@@ -5,7 +5,7 @@
 {{ define "main" }}
 
 <section class="bg-theme-gradient md:pt-8 pb-8">
-    <div class="container mx-auto px-2 md:px-8 md:flex">
+    <div class="container px-2 md:px-8 md:flex">
         <div class="px-2 md:px-8 py-4 flex-1 md:mt-8 text-center md:text-left">
             {{- with .Params.hero_heading -}}
             <h3 class="mb-6 font-semibold text-3xl text-white">{{ markdownify . }}</h3>
@@ -18,7 +18,7 @@
             <a class="btn btn-blue" href="{{ .Params.hero_button_url }}">{{ .Params.hero_button_text }}</a>
         </div>
         <div class="px-2 md:px-8 py-4 flex-1 text-center">
-            <img class="rounded shadow-blurred" src="{{ relURL .Params.hero_image }}" />
+            <img class="rounded shadow-md" src="{{ relURL .Params.hero_image }}" />
         </div>
     </div>
 </section>
@@ -38,7 +38,7 @@
 
     {{ .Content }}
 
-    <div class="bg-theme-gradient-reverse w-full">
+    <div class="bg-theme-gradient-reverse w-full mt-12">
         {{- range .Params.blocks -}}
             {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
             {{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}

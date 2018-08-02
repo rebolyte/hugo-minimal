@@ -3,11 +3,11 @@
 
 {{- $videoSplash := (eq .Params.type "video") -}}
 <section class="py-4 m-4">
-    <div class="container mx-auto flex flex-col items-center">
+    <div class="container flex flex-col items-center">
         <div class="inline-block mb-4">
             <h3 class="font-semibold text-2xl text-rl-gray rl-ctr-title-underline">{{ .Params.heading }}</h3>
         </div>
-		<div class="p-4 sm:p-8 w-full md:min-w-lg max-w-lg bg-white rounded-xl shadow-blurred">
+		<div class="p-4 sm:p-8 w-full md:min-w-lg max-w-lg bg-white rounded shadow-md">
 			{{ if $videoSplash }}
 				<div class="embed-container">{{ .Params.src | safeHTML }}</div>
 			{{ else }}

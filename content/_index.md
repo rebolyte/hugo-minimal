@@ -1,7 +1,8 @@
 ---
 title: Homepage
-hero_heading: Test this out
-hero_content: lorem lorem lorem
+hero_heading: Time tracking that puts the competition to shame.
+hero_content: >
+  Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 hero_button_text: Contact Us
 hero_button_url: "/contact"
 hero_image: "http://via.placeholder.com/600x450"

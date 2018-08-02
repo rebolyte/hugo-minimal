@@ -1,5 +1,5 @@
 <section class="">
-    <div class="container mx-auto mt-12 px-2 md:px-8 grid grid-columns-1 md:grid-columns-2
+    <div class="container mt-12 px-2 md:px-8 grid grid-columns-1 md:grid-columns-2
     {{- with .Params.image_position -}}
         {{- if eq "left" . }} md:grid-col-2-reverse{{- end -}}
     {{- end -}}">
@@ -15,7 +15,7 @@
         </div>
         <div class="px-2 md:px-8 py-4">
             {{ if isset .Params "image" }}
-                <img class="rounded shadow-blurred" src="{{ relURL .Params.image }}" />
+                <img class="rounded shadow-md" src="{{ relURL .Params.image }}" />
             {{ end }}
         </div>
     </div>

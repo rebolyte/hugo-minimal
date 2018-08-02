@@ -17,21 +17,21 @@ blocks:
   - template: "grid-list"
     num_cols: 4
     grid_items:
-      - title: Friendly Syntax
+      - title: Benefit 1
         description: Description goes here.
-      - title: Homoiconic
+      - title: Benefit 2
         description: Description goes here.
-      - title: Reactive and Symbolic
+      - title: Benefit 3
         description: Description goes here.
-      - title: Object Support
+      - title: Benefit 4
         description: Description goes here.
-      - title: Gradual & Multi-typing
+      - title: Benefit 5
         description: Description goes here.
-      - title: Macros System
+      - title: Benefit 6
         description: Description goes here.
-      - title: Built-in Datatypes
+      - title: Benefit 7
         description: Description goes here.
-      - title: Native Code
+      - title: Benefit 8
         description: Description goes here.
   - template: "action-feature"
     heading: "Partner with Us"

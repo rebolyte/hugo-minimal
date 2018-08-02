@@ -5,10 +5,10 @@
 {{ define "main" }}
 
 <section class="w-full px-2 md:px-8 py-2 mt-12 md:mt-24">
-	<div class="container mx-auto px-2 md:px-8">
+	<div class="container px-2 md:px-8">
 		{{ if and (isset .Params "hero_type") (isset .Params "hero_src") }}
 			<div class="relative">
-				<div class="shadow-blurred text-center">
+				<div class="shadow-md text-center">
 					{{ if (eq .Params.hero_type "image") }}
 					<div class="min-h-xsm bg-center bg-no-repeat bg-cover" style="background-image: url('{{ .Params.hero_src }}');"></div>
 					{{ end }}
@@ -20,7 +20,7 @@
 			</div>
 		{{ end }}
 		<div class="max-w-md mx-auto mt-12 md:mt-24">
-			<h1 class="avenir-black text-grey-darker text-4xl">{{ .Title }}</h1>
+			<h1 class="text-theme-primary text-4xl">{{ .Title }}</h1>
 			<div class="text-grey-dark mb-2 opacity-50">{{ .Date.Format "2 January, 2006" }} | By {{ .Params.author }}</div>
 			{{ range .Params.tags }}
 				<a class="tag no-underline" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
