@@ -1,0 +1,13 @@
+{{ $st := cond (isset . "subtitle") (markdownify .subtitle) "" }}
+{{- $hasBg := (isset .page "bg_image") -}}
+{{- $hasCta := (and (isset .page "cta_text") (isset .page "cta_url")) -}}
+<div class="relative h-64 {{ if not $hasBg }}bg-theme-gradient{{ end }} -mt-px md:pt-16 pb-16 mb-12 bg-center bg-no-repeat bg-cover"
+{{ if $hasBg }} style="background-image: url('{{ .page.bg_image }}');" {{ end }}>
+    <div class="container mx-auto relative">
+        <h1 class="text-grey-lighter text-4xl font-bold text-center">{{ .title }}</h1>
+        <h2 class="mt-4 max-w-sm text-grey-lighter text-lg leading-normal font-normal subtitle">{{ $st }}</h2>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute pin-b w-full h-12">
+        <polygon fill="#f1f5f8" points="0,100 100,0 100,100"/>
+    </svg>
+</div>

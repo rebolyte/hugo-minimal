@@ -1,10 +1,10 @@
 {
-  "name": "HugoPipes-tailwindcss",
-  "version": "2.0.0",
-  "description": "Starter files for a Hugo project",
+  "name": "hugo-starter",
+  "version": "1.0.0",
+  "description": "My starter template for Hugo sites",
   "main": "index.js",
-  "repository": "https://github.com/budparr/hugopipes-tailwindcss",
-  "author": "budparr <budparr@gmail.com>",
+  "repository": "https://github.com/rebolyte/hugo-starter",
+  "author": "rebolyte <rebolyte@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "hugo --gc"

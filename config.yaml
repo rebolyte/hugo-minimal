@@ -1,1 +1,78 @@
-title: "HugoPipes-tailwindcss"
+---
+baseURL: "https://your.website/"
+title: Hugo Starter
+languageCode: "en-us"
+metaDataFormat: yaml
+pluralizeListTitles: false
+enableRobotsTXT: true
+paginate: 5 # Number of posts per page
+
+permalinks:
+  blog: /:section/:year/:month/:slug/
+  products: /:section/:slug/
+
+taxonomies:
+  category: category
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - JSON
+  section:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - JSON
+
+menu:
+  main:
+    - Name: "About"
+      Weight: 1
+      Identifier: "about"
+      URL: "/about/"
+    - Name: "Products"
+      Weight: 2
+      Identifier: "products"
+      URL: "/products/"
+    - Name: "Blog"
+      Weight: 4
+      Identifier: "blog"
+      URL: "/blog/"
+    - Name: "Contact Us"
+      Weight: 5
+      Identifier: "contact"
+      URL: "/contact/"
+
+params:
+  Title: "Hugo Starter"
+  CopyrightHTML: "Copyright &#xA9; 2018 Grayscale Digital LLC"
+  navigation:
+    social:
+      - Name: "Reddit"
+        Weight: 1
+        Identifier: "reddit-alien"
+        URL: "https://www.reddit.com/r/redlang/"
+      - Name: "Facebook"
+        Weight: 2
+        Identifier: "facebook-square"
+        URL: "https://facebook.com"
+      - Name: "Twitter"
+        Weight: 3
+        Identifier: "twitter"
+        URL: "https://twitter.com/red_lang"
+      - Name: "Gitter"
+        Weight: 4
+        Identifier: "gitter"
+        URL: "https://gitter.im/red/red"
+      - Name: "GitHub"
+        Weight: 5
+        Identifier: "github"
+        URL: "https://github.com/red/red"
+      - Name: "Telegram"
+        Weight: 6
+        Identifier: "telegram"
+        URL: "https://t.me/redofficial"
+---

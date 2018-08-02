@@ -1,0 +1,43 @@
+/**
+ * PRIMARY NAV
+ */
+
+.nav-item {
+	@apply .block .mt-2;
+}
+
+@screen md {
+	.nav-item {
+		@apply .inline-block .mt-0;
+	}
+
+	.nav-item:not(:last-child) {
+		@apply .mr-2;
+	}
+}
+
+@screen lg {
+	.nav-item:not(:last-child) {
+		@apply .mr-8;
+	}
+}
+
+.nav-link {
+	@apply .text-lg .leading-normal .text-grey .no-underline .whitespace-no-wrap;
+}
+
+/* .nav-link:hover {
+	@apply .text-grey-lighter;
+} */
+
+.nav-cta {
+	@apply .text-lg .leading-normal .no-underline .whitespace-no-wrap .text-red;
+	@apply .border .border-solid .rounded .border-red;
+	@apply .px-6 .py-2 .inline-block .text-center;
+
+	min-width: 12.5rem;
+}
+
+/* .nav-cta:hover {
+	@apply .text-red-lighter .border-red-lighter;
+} */

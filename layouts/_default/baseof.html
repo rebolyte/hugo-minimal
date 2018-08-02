@@ -1,22 +1,30 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ .Hugo.Generator }}
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <!-- specify default title -->
+    <title>{{ block "title" . }}
+		{{ .Title }}
+	{{ end }}</title>
+    {{ partial "header_includes" . }}
+</head>
+<body class="avenir bg-grey-lighter leading-tight h-full">
 
-{{ if .Site.IsServer }}
+<div id="app" class="flex flex-col min-h-full">
+    {{ partial "nav" . }}
+    <div class="flex-1">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+    {{ partial "footer" . }}
+</div>
+{{ partial "footer_includes" . }}
 
-  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") | fingerprint }}
-    
-  <link rel="stylesheet" href="{{ $style.Permalink }}" data> 
-
-{{ else }}
-
-  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js")  | minify | fingerprint }}
-  
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"> 
-
-{{ end }}
-
-  </head>
-  <body>
-    {{ block "main" . }}{{ end }}
-  </body>
+</body>
 </html>
