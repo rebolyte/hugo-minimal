@@ -19,7 +19,10 @@ module.exports = {
         extensions: ['html']
       }], 
       fontFace: true,
-      whitelist: ['class1', 'class2']
+      // Target all classes here that are dynamically assembled somewhere in a template,
+			// e.g. with `grid-columns-{{ .Params.num_cols }}`
+			// TODO: Revisit this!
+      whitelist: [/grid-columns/, 'class2']
     }) 
   ]
 }

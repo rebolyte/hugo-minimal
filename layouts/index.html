@@ -1,8 +1,31 @@
+{{ define "title" }}
+	{{ .Site.Title }}
+{{ end }}
+
 {{ define "main" }}
+
+<section class="bg-theme-gradient md:pt-8 pb-8">
+    <div class="container mx-auto px-2 md:px-8 md:flex">
+        <div class="px-2 md:px-8 py-4 flex-1 md:mt-8 text-center md:text-left">
+            {{- with .Params.hero_heading -}}
+            <h3 class="mb-6 font-semibold text-3xl text-white">{{ markdownify . }}</h3>
+            {{- end -}}
+            {{- with .Params.hero_content -}}
+            <div class="mb-4 text-grey-lighter content">
+                {{ markdownify . }}
+            </div>
+            {{- end -}}
+            <a class="btn btn-blue" href="{{ .Params.hero_button_url }}">{{ .Params.hero_button_text }}</a>
+        </div>
+        <div class="px-2 md:px-8 py-4 flex-1 text-center">
+            <img class="rounded shadow-blurred" src="{{ relURL .Params.hero_image }}" />
+        </div>
+    </div>
+</section>
+
   
     <!-- Use page-specific blockloader, since we need to divide up some sections -->
     {{- range .Params.blocks -}}
-        {{- if eq .template "hero" -}}{{ partial "blocks/hero" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "media-feature" -}}{{ partial "blocks/media-feature" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "narrow-feature" -}}{{ partial "blocks/narrow-feature" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "call-to-action" -}}{{ partial "blocks/cta" (dict "Params" .) }}{{- end -}}
@@ -15,7 +38,7 @@
 
     {{ .Content }}
 
-    <div class="bg-theme-gradient curve-top w-full">
+    <div class="bg-theme-gradient-reverse w-full">
         {{- range .Params.blocks -}}
             {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
             {{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}

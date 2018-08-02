@@ -49,12 +49,18 @@ menu:
 params:
   Title: "Hugo Starter"
   CopyrightHTML: "Copyright &#xA9; 2018 Grayscale Digital LLC"
+  default_cta_heading: Try Us Out
+  default_cta_desc: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. 
+    Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet.
+  default_cta_narrow_desc: Want some human contact?
+  default_cta_narrow_text: Really, try contacting us
   navigation:
     social:
       - Name: "Reddit"
         Weight: 1
         Identifier: "reddit-alien"
-        URL: "https://www.reddit.com/r/redlang/"
+        URL: "https://www.reddit.com/r/funny/"
       - Name: "Facebook"
         Weight: 2
         Identifier: "facebook-square"
@@ -62,17 +68,9 @@ params:
       - Name: "Twitter"
         Weight: 3
         Identifier: "twitter"
-        URL: "https://twitter.com/red_lang"
-      - Name: "Gitter"
-        Weight: 4
-        Identifier: "gitter"
-        URL: "https://gitter.im/red/red"
+        URL: "https://twitter.com/grayscale_digi"
       - Name: "GitHub"
-        Weight: 5
+        Weight: 4
         Identifier: "github"
-        URL: "https://github.com/red/red"
-      - Name: "Telegram"
-        Weight: 6
-        Identifier: "telegram"
-        URL: "https://t.me/redofficial"
+        URL: "https://github.com/rebolyte"
 ---

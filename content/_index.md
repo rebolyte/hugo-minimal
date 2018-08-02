@@ -1,32 +1,28 @@
 ---
 title: Homepage
+hero_heading: Test this out
+hero_content: lorem lorem lorem
+hero_button_text: Contact Us
+hero_button_url: "/contact"
+hero_image: "http://via.placeholder.com/600x450"
 blocks:
-  - template: "hero"
-    heading: "We Are Building Software for the Next Generation of Innovators."
-    content: >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum temporibus eum quibusdam quas
-        voluptatum reiciendis optio ipsa nulla maxime dignissimos debitis, laboriosam quisquam nobis
-        tempore sed dicta voluptate eaque eius?
-    button_text: "Contact Us"
-    button_url: "/contact"
-    image_position: "right"
   - template: "card-grid"
     num_cols: 3
     cards:
-      - title: "Services"
+      - title: "About"
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
         buttonText: "Learn More"
-        buttonUrl: "/services/"
+        buttonUrl: "/about/"
       - title: "Products"
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
         buttonText: "Learn More"
         buttonUrl: "/products/"
-      - title: "Case Studies"
+      - title: "Blog"
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
         buttonText: "Learn More"
-        buttonUrl: "/case-studies/"
+        buttonUrl: "/blog/"
   - template: "2up"
-    heading: "Full-Stack Developers Using Full-Stack Technology"
+    heading: "Filling up the homepage with great filler content"
     left: |-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.  Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
     right: |-
@@ -35,14 +31,14 @@ blocks:
 
       Lorem ipsum dolor *sit amet*, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
   - template: "action-feature"
-    heading: "We Build the Product, You Supply the Idea."
+    heading: "Find out just how much we can do for you. Let's talk."
     content: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
-    image: "http://via.placeholder.com/400x450"
-    image_position: "right"
+    image: "http://via.placeholder.com/600x450"
+    image_position: "left"
     button_text: "Contact Us"
     button_url: "/contact/"
-    bg_dark: false
+    bg_dark: true
   - template: "narrow-cta"
     description: "Want to Talk with an Actual Person?"
     link_url: "/contact/"

@@ -16,12 +16,12 @@
 					<div class="embed-container">{{ .Params.hero_src | safeHTML }}</div>
 					{{ end }}
 				</div>
-                <div class="absolute pin-b pin-r -mb-4 mr-12 text-rl-gray bg-rl-gray-lightest pl-8 py-4 rounded-xl text-left min-w-xs">{{ i18n "category" }}: {{ .Params.category | title }}</div>
+                <div class="absolute pin-b pin-r -mb-4 mr-12 text-grey-dark bg-grey-lightest pl-8 py-4 rounded-xl text-left min-w-xs">Category: {{ .Params.category | title }}</div>
 			</div>
 		{{ end }}
 		<div class="max-w-md mx-auto mt-12 md:mt-24">
 			<h1 class="avenir-black text-grey-darker text-4xl">{{ .Title }}</h1>
-			<div class="text-rl-gray mb-2 opacity-50">{{ .Date.Format "2 January, 2006" }} | By {{ .Params.author }}</div>
+			<div class="text-grey-dark mb-2 opacity-50">{{ .Date.Format "2 January, 2006" }} | By {{ .Params.author }}</div>
 			{{ range .Params.tags }}
 				<a class="tag no-underline" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
 			{{ end }}
@@ -33,7 +33,6 @@
 </section>
 
 <div class="bg-theme-gradient border-top-theme w-full">
-	{{/* TODO: (in .Params.blocks.template "action-feature") */}}
 	{{ if (isset .Params "blocks") }}
 		{{- range .Params.blocks -}}
 			<div class="min-h-xs flex flex-col justify-center">
@@ -42,8 +41,8 @@
 			{{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}
 		{{- end -}}
 	{{ else }}
-		{{ $p := (dict "heading" (i18n "cta_heading") "content" (i18n "cta_desc") "button_text" (i18n "contact") "button_url" (relLangURL "contact/") "bg_dark" false)}}
-		{{ $p2 := (dict "description" (i18n "cta_narrow_heading") "link_text" (i18n "cta_narrow_text") "link_url" (relLangURL "contact/")) }}
+		{{ $p := (dict "heading" $.Site.Params.default_cta_heading "content" $.Site.Params.default_cta_desc "button_text" "Contact Us" "button_url" (relLangURL "contact/") "bg_dark" true)}}
+		{{ $p2 := (dict "description" $.Site.Params.default_cta_narrow_desc "link_text" $.Site.Params.default_cta_narrow_text "link_url" (relLangURL "contact/")) }}
 		<div class="min-h-xs flex flex-col justify-center">
 			{{ partial "blocks/action-feature" (dict "Params" $p) }}
 		</div>

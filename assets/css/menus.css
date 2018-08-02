@@ -23,7 +23,7 @@
 }
 
 .nav-link {
-	@apply .text-lg .leading-normal .text-grey .no-underline .whitespace-no-wrap;
+	@apply .text-lg .leading-normal .text-grey-light .no-underline .whitespace-no-wrap;
 }
 
 /* .nav-link:hover {
@@ -31,8 +31,8 @@
 } */
 
 .nav-cta {
-	@apply .text-lg .leading-normal .no-underline .whitespace-no-wrap .text-red;
-	@apply .border .border-solid .rounded .border-red;
+	@apply .text-lg .leading-normal .no-underline .whitespace-no-wrap .text-grey-light;
+	@apply .border .border-solid .rounded .border-grey-light;
 	@apply .px-6 .py-2 .inline-block .text-center;
 
 	min-width: 12.5rem;

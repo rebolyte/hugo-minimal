@@ -1,17 +1,17 @@
 .dim {
 	opacity: 1;
 	transition: opacity 0.15s ease-in;
-}
 
-.dim:focus,
-.dim:hover {
-	opacity: 0.5;
-	transition: opacity 0.15s ease-in;
-}
+	&:focus,
+	&:hover {
+		opacity: 0.5;
+		transition: opacity 0.15s ease-in;
+	}
 
-.dim:active {
-	opacity: 0.8;
-	transition: opacity 0.15s ease-out;
+	&:active {
+		opacity: 0.8;
+		transition: opacity 0.15s ease-out;
+	}
 }
 
 .btn {
@@ -21,17 +21,32 @@
 
 .btn-red {
 	@apply .bg-red;
+	
+	&:hover {
+		@apply .bg-red-dark;
+
+		transition: background-color 0.15s ease-out;
+	}
+
+	&:active {
+		opacity: 0.8;
+		transition: opacity 0.15s ease-out;
+	}
 }
 
-.btn-red:hover {
-	@apply .bg-red-dark;
+.btn-blue {
+	@apply .bg-blue;
+	
+	&:hover {
+		@apply .bg-blue-dark;
 
-	transition: background-color 0.15s ease-out;
-}
+		transition: background-color 0.15s ease-out;
+	}
 
-.btn-red:active {
-	opacity: 0.8;
-	transition: opacity 0.15s ease-out;
+	&:active {
+		opacity: 0.8;
+		transition: opacity 0.15s ease-out;
+	}
 }
 
 .btn-outline {
@@ -42,18 +57,34 @@
 
 .btn-outline-red {
 	@apply .text-red .border-red;
+
+	&:hover {
+		@apply .border-red-dark;
+
+		transition: border-color 0.15s ease-out;
+		transition: color 0.15s ease-out;
+	}
+
+	&:active {
+		opacity: 0.8;
+		transition: opacity 0.15s ease-out;
+	}
 }
 
-.btn-red-outline:hover {
-	@apply .border-red-dark;
+.btn-outline-blue {
+	@apply .text-blue .border-blue;
 
-	transition: border-color 0.15s ease-out;
-	transition: color 0.15s ease-out;
-}
+	&:hover {
+		@apply .border-blue-dark;
 
-.btn-red-outline:active {
-	opacity: 0.8;
-	transition: opacity 0.15s ease-out;
+		transition: border-color 0.15s ease-out;
+		transition: color 0.15s ease-out;
+	}
+
+	&:active {
+		opacity: 0.8;
+		transition: opacity 0.15s ease-out;
+	}
 }
 
 .card {
@@ -69,5 +100,5 @@
 }
 
 .tag {
-	@apply .inline-block .bg-grey-lighter .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2;
+	@apply .inline-block .bg-grey-light .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2;
 }
