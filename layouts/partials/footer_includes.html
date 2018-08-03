@@ -1,7 +1,12 @@
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-{{ if (fileExists "themes/featherweight/data/assetMap.json") -}}
-	<script src="{{ .Site.BaseURL }}{{ index .Site.Data.assetMap "main.js" }}"></script>
-{{- end }}
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
+{{- $main := resources.Get "js/main.js" -}}
+{{- $plugins := resources.Get "js/plugins.js" -}}
+
+{{- $defaultJS := slice $plugins $main | resources.Concat "js/default.js" -}}
+{{- $globalJS := $defaultJS | resources.Minify | resources.Fingerprint }}
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
@@ -15,5 +20,3 @@
 		});
 	}
 </script>
-
-{{ template "_internal/google_analytics_async.html" . }}

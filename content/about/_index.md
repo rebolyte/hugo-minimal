@@ -33,6 +33,11 @@ blocks:
         description: Description goes here.
       - title: Benefit 8
         description: Description goes here.
+  - template: "1up-media"
+    type: "video"
+    heading: "Our Mission"
+    src: >
+      <iframe src="https://www.youtube.com/embed/SGjVUfiZBLA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   - template: "action-feature"
     heading: "Partner with Us"
     content: Partner with the world’s most innovative community and help us fight complexity today.

@@ -31,7 +31,7 @@
                 <ul class="list-reset mb-4 text-center">
                     {{ range .Site.Taxonomies.category.Alphabetical }}
                         <li>
-                            <a class="no-underline text-rl-gray dim" href="{{ "category/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
+                            <a class="no-underline text-theme-primary dim" href="{{ "category/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
                                 {{- .Name | humanize }}
                             </a>
                         </li>

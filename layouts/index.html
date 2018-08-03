@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 
-<section class="bg-theme-gradient md:pt-8 pb-8">
+<section class="relative bg-theme-gradient md:pt-8 pb-24">
     <div class="container px-2 md:px-8 md:flex">
         <div class="px-2 md:px-8 py-4 flex-1 md:mt-8 text-center md:text-left">
             {{- with .Params.hero_heading -}}
@@ -21,8 +21,10 @@
             <img class="rounded shadow-md" src="{{ relURL .Params.hero_image }}" />
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute pin-b w-full h-12">
+        <polygon fill="#f1f5f8" points="0,100 100,0 100,100"/>
+    </svg>
 </section>
-
   
     <!-- Use page-specific blockloader, since we need to divide up some sections -->
     {{- range .Params.blocks -}}
@@ -34,9 +36,33 @@
         {{- if eq .template "1up-media" -}}{{ partial "blocks/1up-media" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "card-grid" -}}{{ partial "blocks/card-grid" (dict "Params" .) }}{{- end -}}
         {{- if eq .template "grid-list" -}}{{ partial "blocks/grid-list" (dict "Params" .) }}{{- end -}}
+        {{- if eq .template "accordion" -}}{{ partial "blocks/accordion" (dict "Params" .) }}{{- end -}}        
     {{- end -}}
 
+    <section class="py-4">
+		<div class="container mx-auto flex flex-col items-center px-4">
+			<div class="inline-block mb-4">
+				<h3 class="font-semibold text-2xl text-theme-primary text-center ctr-title-underline">{{ .Params.content_samples_heading }}</h3>
+			</div>
+			<content-samples :items="window.sampleContent"></content-samples>
+		</div>
+	</section>
+
     {{ .Content }}
+
+
+    <section class="py-4">
+            <div class="container mx-auto flex flex-col items-center px-4">
+                <div class="inline-block mb-4">
+                    <h3 class="font-semibold text-2xl text-theme-primary text-center ctr-title-underline">{{ .Params.latest_blogs_heading }}</h3>
+                </div>
+                <div class="mx-auto card max-w-md">
+                    {{ range first 4 (where .Data.Pages.ByDate.Reverse "Section" "blog") }}
+                    {{ .Render "li" }}
+                    {{ end }}
+                </div>
+            </div>
+        </section>
 
     <div class="bg-theme-gradient-reverse w-full mt-12">
         {{- range .Params.blocks -}}
