@@ -38,11 +38,11 @@ menu:
       Identifier: "products"
       URL: "/products/"
     - Name: "Blog"
-      Weight: 4
+      Weight: 3
       Identifier: "blog"
       URL: "/blog/"
     - Name: "Contact Us"
-      Weight: 5
+      Weight: 4
       Identifier: "contact"
       URL: "/contact/"
 
