@@ -1,18 +1,3 @@
-console.log('pluginz');
-
-Vue.component('accordion-toggle', {
-	// &#x25B2; // up
-	// &#x25BC; // down
-	template: `
-		<div :class="{ 'is-open': toggle }" @click="toggle = !toggle">
-			<slot></slot>
-		</div>
-	`,
-	data() {
-		return { toggle: false };
-	}
-});
-
 Vue.component('content-samples', {
 	template: `
 		<div class="flex flex-col md:flex-row w-full rounded bg-white shadow-md max-w-xl min-h-xs">

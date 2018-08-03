@@ -37,7 +37,7 @@ blocks:
     type: "video"
     heading: "Our Mission"
     src: >
-      <iframe src="https://www.youtube.com/embed/SGjVUfiZBLA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/QILiHiTD3uc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   - template: "action-feature"
     heading: "Partner with Us"
     content: Partner with the world’s most innovative community and help us fight complexity today.

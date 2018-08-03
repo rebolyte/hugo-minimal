@@ -1,4 +1,4 @@
-console.log('main herrr');
+console.log('JS iz herr');
 
 window.sampleContent = [
 	{
