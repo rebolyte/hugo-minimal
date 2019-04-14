@@ -3,11 +3,11 @@
 {{- $hasCta := (and (isset .page "cta_text") (isset .page "cta_url")) -}}
 <div class="relative h-64 {{ if not $hasBg }}bg-theme-gradient{{ end }} -mt-px md:pt-16 pb-16 mb-12 bg-center bg-no-repeat bg-cover"
 {{ if $hasBg }} style="background-image: url('{{ .page.bg_image }}');" {{ end }}>
-    <div class="container relative px-4">
-        <h1 class="text-grey-lighter text-4xl font-bold">{{ .title }}</h1>
-        <h2 class="mt-4 max-w-sm text-grey-lighter text-lg leading-normal font-normal subtitle">{{ $st }}</h2>
+    <div class="container relative px-8">
+        <h1 class="text-white text-4xl font-bold">{{ .title }}</h1>
+        <h2 class="mt-4 max-w-sm text-gray-200 text-lg leading-normal font-normal subtitle">{{ $st }}</h2>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute pin-b w-full h-12">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute bottom-0 w-full h-12">
         <polygon fill="#f1f5f8" points="0,100 100,0 100,100"/>
     </svg>
 </div>

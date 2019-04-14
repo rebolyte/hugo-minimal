@@ -5,7 +5,7 @@
 /**
  * Tailwind's preflight which resets the browser to be ready for Tailwind's utilities
  */
-@import 'tailwindcss/preflight';
+@import 'tailwindcss/base';
 
 /**
  * Any custom component code. This comes before Tailwind's utilities to ensure the cascade doesn't
@@ -34,35 +34,35 @@
 */
 
 .text-theme-primary {
-	@apply .text-grey-darker;
+	@apply .text-gray-700;
 }
 
 .bg-theme-primary {
-	@apply .bg-blue;
+	@apply .bg-blue-500;
 }
 
 .bg-theme-accent {
-	@apply .bg-blue-lighter;
+	@apply .bg-blue-400;
 }
 
 .bg-theme-gradient {
 	background-image: linear-gradient(
 		to bottom,
-		config('colors.blue'),
-		config('colors.blue-dark')
+		theme('colors.blue.500'),
+		theme('colors.blue.700')
 	);
 }
 
 .bg-theme-gradient-reverse {
 	background-image: linear-gradient(
 		to top,
-		config('colors.blue'),
-		config('colors.blue-dark')
+		theme('colors.blue.500'),
+		theme('colors.blue.700')
 	);
 }
 
 .mobile-theme-menu {
-	@apply .text-blue-lighter .border-blue-light;
+	@apply .text-blue-300 .border-blue-400;
 }
 
 .mobile-theme-menu:hover {
@@ -72,16 +72,16 @@
 .bg-blue-gradient {
 	background-image: linear-gradient(
 		to bottom,
-		config('colors.blue'),
-		config('colors.blue-dark')
+		theme('colors.blue.500'),
+		theme('colors.blue.700')
 	);
 }
 
 .bg-blue-gradient-reverse {
 	background-image: linear-gradient(
 		to top,
-		config('colors.blue'),
-		config('colors.blue-dark')
+		theme('colors.blue.500'),
+		theme('colors.blue.700')
 	);
 }
 
@@ -99,7 +99,7 @@
 	}
 }
 
-@media (max-width: config('screens.md')) {
+@media (max-width: theme('screens.md')) {
 	.mobile\:hidden {
 		display: none;
 	}
@@ -115,7 +115,7 @@
 	margin: 7px 0 16px 0;
 	width: 25px;
 	height: 4px;
-	background-color: config('colors.blue-darker');
+	background-color: theme('colors.blue.700');
 }
 
 .ctr-title-underline::after {
@@ -124,15 +124,15 @@
 	margin: 7px auto 16px auto;
 	width: 45px;
 	height: 4px;
-	background-color: config('colors.blue-darker');
+	background-color: theme('colors.blue.700');
 }
 
 a.content-li {
-	@apply .block .py-2 .no-underline;
+	@apply .block .py-2;
 }
 
 a.content-li:not(:last-child) {
-	@apply .border-b .border-grey;
+	@apply .border-b .border-gray-500;
 }
 
 /* http://embedresponsively.com/ */

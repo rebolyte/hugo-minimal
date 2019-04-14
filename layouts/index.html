@@ -11,7 +11,7 @@
             <h3 class="mb-6 font-semibold text-3xl text-white">{{ markdownify . }}</h3>
             {{- end -}}
             {{- with .Params.hero_content -}}
-            <div class="mb-4 text-grey-lighter content">
+            <div class="mb-4 text-gray-300 content">
                 {{ markdownify . }}
             </div>
             {{- end -}}
@@ -21,7 +21,7 @@
             <img class="rounded shadow-md" src="{{ relURL .Params.hero_image }}" />
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute pin-b w-full h-12">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute bottom-0 w-full h-12">
         <polygon fill="#f1f5f8" points="0,100 100,0 100,100"/>
     </svg>
 </section>

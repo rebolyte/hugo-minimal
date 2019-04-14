@@ -15,6 +15,6 @@
     "postcss-cli": "^6.0.0",
     "postcss-import": "^11.0.0",
     "postcss-nested": "^3.0.0",
-    "tailwindcss": "^0.6.4"
+    "tailwindcss": "^1.0.0-beta.4"
   }
 }

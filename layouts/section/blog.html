@@ -19,7 +19,7 @@
             <div class="card lg:min-w-xs">
                 <div class="card-title ctr-title-underline">Stay Updated</div>
                 <div class="text-center mb-4">
-                    <a class="no-underline text-blue hover:text-blue-dark" href="index.xml">{{ partial "icon" (dict "icon" "rss") }} Subscribe via RSS</a>
+                    <a class="text-blue-600 hover:text-blue-700" href="index.xml">{{ partial "icon" (dict "icon" "rss") }} Subscribe via RSS</a>
                 </div>
                 <input type="text" class="text-input mx-auto" placeholder="you@abc.com">
                 <div class="text-center">
@@ -28,10 +28,10 @@
             </div>
             <div class="card lg:min-w-xs">
                 <div class="card-title ctr-title-underline">Categories</div>
-                <ul class="list-reset mb-4 text-center">
+                <ul class="mb-4 text-center">
                     {{ range .Site.Taxonomies.category.Alphabetical }}
                         <li>
-                            <a class="no-underline text-theme-primary dim" href="{{ "category/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
+                            <a class="text-theme-primary dim" href="{{ "category/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
                                 {{- .Name | humanize }}
                             </a>
                         </li>
@@ -40,11 +40,11 @@
             </div>
             <div class="card lg:min-w-xs">
                 <div class="card-title ctr-title-underline">Top Tags</div>
-                <ul class="list-reset mb-4 text-center">
+                <ul class="mb-4 text-center">
                     {{ with .Site.Taxonomies.tags.ByCount }}
                         {{ range first 5 . }}
                             <li>
-                                <a class="no-underline text-theme-primary dim" href="{{ "tags/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
+                                <a class="text-theme-primary dim" href="{{ "tags/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
                                     {{- .Name | humanize | lower }} ({{ .Count -}})
                                 </a>
                             </li>
@@ -52,7 +52,7 @@
                     {{ end }}
                 </ul>
                 <div class="text-center">
-                    <a href="/tags/" class="no-underline text-theme-primary dim">See all tags</a>
+                    <a href="/tags/" class="text-theme-primary dim">See all tags</a>
                 </div>
             </div>
         </aside>

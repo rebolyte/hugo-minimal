@@ -4,10 +4,10 @@
             {{ range .Params.accordion_items }}
                 <accordion-toggle class="w-full p-8 mb-4 bg-grey-lightest rounded-lg select-none has-dropdown">
                     <div class="flex justify-between px-2 my-4">
-                        <h4 class="text-lg text-rl-gray font-bold">{{ .title }}</h4>
+                        <h4 class="text-lg text-gray-700 font-bold">{{ .title }}</h4>
                         <div class="arrow"></div>
                     </div>
-                    <div class="content description text-grey-darker px-2">
+                    <div class="content description text-gray-800 px-2">
                         {{ .description | markdownify }}
                     </div>
                 </accordion-toggle>

@@ -2,7 +2,7 @@
     <div class="container flex flex-col md:flex-row items-center justify-between py-4 px-8">
         <div class="text-2l font-semibold flex flex-row justify-between w-full md:w-16">
             <div>
-                <a class="text-grey-darker no-underline" href="{{ .Site.BaseURL | relLangURL }}" title="Home">
+                <a class="text-gray-800" href="{{ .Site.BaseURL | relLangURL }}" title="Home">
                     {{ .Site.Title }}
                 </a>
             </div>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <nav class="items-start md:items-center flex-col md:flex-row md:flex md:justify-end w-full" :class="{ 'mobile:hidden': !isMainMenuOpen }">
-            <ul class="list-reset">
+            <ul>
                 {{- $currentPage := . -}}
                 {{ $list := (.Site.Menus.main) }}
                 {{ $len := (len $list) }}

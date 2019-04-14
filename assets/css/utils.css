@@ -20,14 +20,14 @@
 
 .btn {
 	@apply .inline-block .my-4 .py-2 .px-4 .min-w-2xs .rounded .cursor-pointer;
-	@apply .no-underline .bg-grey .text-white .text-center .text-sm;
+	@apply .bg-gray-500 .text-white .text-center .text-sm;
 }
 
 .btn-red {
-	@apply .bg-red;
+	@apply .bg-red-500;
 	
 	&:hover {
-		@apply .bg-red-dark;
+		@apply .bg-red-400;
 
 		transition: background-color 0.15s ease-out;
 	}
@@ -39,10 +39,10 @@
 }
 
 .btn-blue {
-	@apply .bg-blue;
+	@apply .bg-blue-500;
 	
 	&:hover {
-		@apply .bg-blue-dark;
+		@apply .bg-blue-400;
 
 		transition: background-color 0.15s ease-out;
 	}
@@ -54,16 +54,16 @@
 }
 
 .btn-outline {
-	@apply .leading-normal .no-underline .whitespace-no-wrap .text-center .text-grey;
-	@apply .border .border-solid .rounded .border-grey;
+	@apply .leading-normal .whitespace-no-wrap .text-center .text-gray-500;
+	@apply .border .border-solid .rounded .border-gray-500;
 	@apply .inline-block .px-6 .py-2 .min-w-2xs;
 }
 
 .btn-outline-red {
-	@apply .text-red .border-red;
+	@apply .text-red-500 .border-red-500;
 
 	&:hover {
-		@apply .border-red-dark;
+		@apply .border-red-400;
 
 		transition: border-color 0.15s ease-out;
 		transition: color 0.15s ease-out;
@@ -76,10 +76,10 @@
 }
 
 .btn-outline-blue {
-	@apply .text-blue .border-blue;
+	@apply .text-blue-500 .border-blue-500;
 
 	&:hover {
-		@apply .border-blue-dark;
+		@apply .border-blue-400;
 
 		transition: border-color 0.15s ease-out;
 		transition: color 0.15s ease-out;
@@ -96,13 +96,13 @@
 }
 
 .card-title {
-	@apply .font-bold .text-xl .mb-2 .text-center .text-grey;
+	@apply .font-bold .text-xl .mb-2 .text-center .text-gray-700;
 }
 
 .text-input {
-	@apply .shadow .appearance-none .border .rounded .w-full .py-2 .px-3 .text-grey-darker;
+	@apply .shadow .appearance-none .border .rounded .w-full .py-2 .px-3 .text-gray-700;
 }
 
 .tag {
-	@apply .inline-block .bg-grey-light .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2;
+	@apply .inline-block .bg-gray-400 .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-gray-700 .mr-2;
 }

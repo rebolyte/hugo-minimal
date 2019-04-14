@@ -1,5 +1,5 @@
 <article class="mb-4">
-    <div class="pb-4 max-w-md rounded overflow-hidden shadow-md bg-white">
+    <div class="pb-4 max-w-2xl rounded overflow-hidden shadow-md bg-white">
         <a href="{{ .RelPermalink | relLangURL }}">
             {{ if and (isset .Params "hero_type") (isset .Params "hero_src") }}
                 <div class="text-center">
@@ -15,16 +15,16 @@
             {{ end }}
         </a>
         <div class="px-4 md:px-16 pt-6 pb-4">
-            <div class="mb-2"><a class="font-bold text-theme-primary text-2xl no-underline" href="{{ .RelPermalink | relLangURL }}">{{ .Title }}</a></div>
-            <div class="text-rl-gray mb-2">{{ .Date.Format "2 January, 2006" }} | By {{ .Params.author }}</div>
-            <div class="pt-1 pb-2">
+            <div class="mb-2"><a class="font-bold text-theme-primary text-2xl" href="{{ .RelPermalink | relLangURL }}">{{ .Title }}</a></div>
+            <div class="text-gray-700 mb-2">{{ .Date.Format "2 January, 2006" }} | By {{ .Params.author }}</div>
+            <div class="pt-1 pb-5">
                 {{ range .Params.tags }}
                     <span class="tag">#{{ . }}</span>
                 {{ end }}
             </div>
             <p class="text-theme-primary text-base">{{ .Summary }}</p>
         </div>
-        <p class="px-4 md:px-16 pt-6 pb-4 read-more-anchor">
+        <p class="px-4 md:px-16 pt-2 pb-4 read-more-anchor">
             <a class="btn-outline btn-outline-blue" href="{{ .RelPermalink | relLangURL }}">Read More</a>
         </p>
 

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-8">
     {{- $num := (int .Params.num_cols) -}}
     {{/* printf "%#v" $num */}}
     {{/* printf "%T" $num */}}
@@ -9,12 +9,12 @@
                 {{ if (isset . "icon") }}
                     <img class="h-12 w-12 mx-auto rounded-full block bg-cover bg-center bg-no-repeat" style="background-image: url('{{ .icon }}');">
                 {{ else }}
-                    <div class="h-12 w-12 mx-auto rounded-full bg-teal"></div>
+                    <div class="h-12 w-12 mx-auto rounded-full bg-teal-800"></div>
                 {{ end }}
                 {{- with .title -}}
-                    <h4 class="text-center text-lg text-rl-gray rl-ctr-title-underline mt-4">{{ . }}</h4>
+                    <h4 class="text-center text-lg text-gray-700 rl-ctr-title-underline mt-4">{{ . }}</h4>
                 {{- end -}}
-                <p class="pt-2 text-center text-rl-gray">{{ .description }}</p>
+                <p class="pt-2 text-center text-gray-700">{{ .description }}</p>
             </div>
         {{ end }}
     </div>
