@@ -1,6 +1,6 @@
 Vue.component('content-samples', {
 	template: `
-		<div class="flex flex-col md:flex-row w-full rounded bg-white shadow-md max-w-xl min-h-xs">
+		<div class="flex flex-col md:flex-row w-full rounded bg-white shadow-md max-w-4xl min-h-xs">
 
 			<pre class="md:w-1/2 p-4 bg-gray-700 text-white overflow-auto rounded-tl rounded-bl">
 {{ selectedItem.content }}

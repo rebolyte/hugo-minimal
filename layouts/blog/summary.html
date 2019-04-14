@@ -4,14 +4,14 @@
             {{ if and (isset .Params "hero_type") (isset .Params "hero_src") }}
                 <div class="text-center">
                     {{ if (eq .Params.hero_type "image") }}
-                        <div class="h-80 bg-center bg-no-repeat bg-cover" style="background-image: url('{{ .Params.hero_src }}');"></div>
+                        <div class="h-64 bg-center bg-no-repeat bg-cover" style="background-image: url('{{ .Params.hero_src }}');"></div>
                     {{ end }}
                     {{ if (eq .Params.hero_type "video") }}
                         <div class="embed-container">{{ .Params.hero_src | safeHTML }}</div>
                     {{ end }}
                 </div>
             {{ else }}
-                <div class="h-80 bg-center bg-no-repeat bg-cover" style="background-image: url('http://via.placeholder.com/800x480');"></div>
+            <div class="h-64 bg-center bg-no-repeat bg-cover" style="background-image: url('http://via.placeholder.com/800x480');"></div>
             {{ end }}
         </a>
         <div class="px-4 md:px-16 pt-6 pb-4">
@@ -22,7 +22,7 @@
                     <span class="tag">#{{ . }}</span>
                 {{ end }}
             </div>
-            <p class="text-theme-primary text-base">{{ .Summary }}</p>
+            <p class="text-theme-primary text-base content">{{ .Summary }}</p>
         </div>
         <p class="px-4 md:px-16 pt-2 pb-4 read-more-anchor">
             <a class="btn-outline btn-outline-blue" href="{{ .RelPermalink | relLangURL }}">Read More</a>

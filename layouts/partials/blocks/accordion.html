@@ -1,8 +1,8 @@
 <section class="p-4">
-    <div class="container mt-12">
+    <div class="container max-w-4xl mt-12">
         <div id="accordion">
             {{ range .Params.accordion_items }}
-                <accordion-toggle class="w-full p-8 mb-4 bg-grey-lightest rounded-lg select-none has-dropdown">
+                <accordion-toggle class="w-full p-8 mb-4 bg-gray-300 rounded-lg select-none has-dropdown">
                     <div class="flex justify-between px-2 my-4">
                         <h4 class="text-lg text-gray-700 font-bold">{{ .title }}</h4>
                         <div class="arrow"></div>

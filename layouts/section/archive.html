@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="w-full px-2 md:px-8 py-2 mt-8">
+    <div class="container px-2 md:px-8 font-semibold mb-8">
+		<h1 class="text-4xl font-bold text-gray-800 py-3">{{ .Title }}</h1>
+
+		{{ range (where .Site.Pages "Section" "blog").GroupByDate "2006" }}
+			<h4 class="text-2xl font-bold text-gray-800 py-2">{{ .Key }}</h4>
+			<ul>
+				{{ range .Pages }}
+					{{ if ne .Type "index" }}
+						{{ .Render "li" }}
+					{{ end }}
+				{{- end }}
+				</ul>
+		{{ end }}
+	</div>
+</section>
+{{ end }}
