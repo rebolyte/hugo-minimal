@@ -24,8 +24,7 @@ module.exports = {
 			// e.g. with `grid-columns-{{ .Params.num_cols }}`
 			// TODO: Revisit this!
       whitelist: ['blockquote', 'pre', 'code', 'table', 'th', 'tr', 'td', 'ul', 'ol'],
-      whitelistPatterns: [/grid-columns/],
-      rejected: true
+      whitelistPatterns: [/grid-columns/]
     }) 
   ]
 }

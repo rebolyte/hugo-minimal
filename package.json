@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My starter template for Hugo sites",
   "main": "index.js",
-  "repository": "https://github.com/rebolyte/hugo-starter",
+  "repository": "https://gitlab.com/rebolyte/hugo-minimal",
   "author": "rebolyte <rebolyte@gmail.com>",
   "license": "MIT",
   "scripts": {

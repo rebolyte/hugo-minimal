@@ -22,3 +22,5 @@ Hugo will not [rebuild](https://discourse.gohugo.io/t/regenerating-assets-direct
 
 - PurgeCSS will fail if any of your templates are empty.
 - If you add themes, you need to add the file location in the PurgeCSS `content` configuration item.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2fade68f-423c-44b1-80b5-ce4323ad3b8e/deploy-status)](https://app.netlify.com/sites/hugo-minimal/deploys)
