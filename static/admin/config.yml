@@ -43,10 +43,10 @@ collections:
                     widget: "list"
                     create: true
                     fields:
-                      - { label: "Title" name: "title" widget: "string" }
-                      - { label: "description" name: "description" widget: "string" }
-                      - { label: "Button Text" name: "buttonText" widget: "string" }
-                      - { label: "Button URL" name: "buttonUrl" widget: "string" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "description", name: "description", widget: "string" }
+                      - { label: "Button Text", name: "buttonText", widget: "string" }
+                      - { label: "Button URL", name: "buttonUrl", widget: "string" }
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
