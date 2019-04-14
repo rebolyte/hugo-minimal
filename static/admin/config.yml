@@ -6,7 +6,7 @@ media_folder: "static/images" # Media files will be stored in the repo under sta
 public_folder: "/images" # The src attribute for uploaded media will begin with /images
 
 collections:
-  - name: "pages"
+  - name: "pages"''
     label: "Pages"
     files:
       - name: "home"
@@ -33,6 +33,20 @@ collections:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Left Text", name: "left", widget: "markdown" }
                   - { label: "Right Text", name: "right", widget: "markdown" }
+              - label: "Card Grid"
+                name: "card-grid"
+                widget: object
+                fields:
+                  - { label: "Columns", name: "num_cols", widget: "number" }
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    create: true
+                    fields:
+                      - { label: "Title" name: "title" widget: "string" }
+                      - { label: "description" name: "description" widget: "string" }
+                      - { label: "Button Text" name: "buttonText" widget: "string" }
+                      - { label: "Button URL" name: "buttonUrl" widget: "string" }
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
