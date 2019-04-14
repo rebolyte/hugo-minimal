@@ -83,10 +83,6 @@
 		color: theme('colors.blue.500');
 	}
 
-	ul {
-		margin-bottom: 1rem;
-	}
-
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -124,7 +120,8 @@
 		list-style-type: disc;
 		padding-left: theme('padding.5');
 		margin-left: theme('margin.3');
-		
+		margin-bottom: theme('margin.4');
+
 		li {
 			padding-left: theme('padding.2');
 		}
@@ -134,7 +131,8 @@
 		list-style-type: decimal;
 		padding-left: theme('padding.5');
 		margin-left: theme('margin.3');
-		
+		margin-bottom: theme('margin.4');
+
 		li {
 			padding-left: theme('padding.2');
 		}

@@ -12,17 +12,20 @@ module.exports = {
     require('tailwindcss')('./assets/css/tailwind.config.js'),
     require('postcss-nested'),
     require('@fullhuman/postcss-purgecss')({
-      content: ['layouts/**/*.html'],
+      content: ['layouts/**/*.html', 'assets/js/**/*.js', 'content/**/*.md'],
       extractors: [
-      {
-        extractor: TailwindExtractor,
-        extensions: ['html']
-      }], 
+        {
+          extractor: TailwindExtractor,
+          extensions: ['html', 'js', 'md']
+        }
+      ], 
       fontFace: true,
       // Target all classes here that are dynamically assembled somewhere in a template,
 			// e.g. with `grid-columns-{{ .Params.num_cols }}`
 			// TODO: Revisit this!
-      whitelist: [/grid-columns/, 'class2']
+      whitelist: ['blockquote', 'pre', 'code', 'table', 'th', 'tr', 'td', 'ul', 'ol'],
+      whitelistPatterns: [/grid-columns/],
+      rejected: true
     }) 
   ]
 }
