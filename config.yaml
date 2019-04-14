@@ -1,5 +1,5 @@
 ---
-baseURL: "https://your.website/"
+baseURL: "https://hugo-minimal.netlify.com/"
 title: Hugo Starter
 languageCode: "en-us"
 metaDataFormat: yaml
