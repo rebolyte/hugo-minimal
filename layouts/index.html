@@ -58,7 +58,9 @@
                 </div>
                 <div class="mx-auto card max-w-2xl">
                     {{ range first 4 (where .Data.Pages.ByDate.Reverse "Section" "blog") }}
-                    {{ .Render "li" }}
+                    <div class="content-li">
+                        {{ .Render "li" }}
+                    </div>
                     {{ end }}
                 </div>
             </div>

@@ -127,11 +127,11 @@
 	background-color: theme('colors.blue.700');
 }
 
-a.content-li {
+.content-li {
 	@apply .block .py-2;
 }
 
-a.content-li:not(:last-child) {
+.content-li:not(:last-child) {
 	@apply .border-b .border-gray-500;
 }
 

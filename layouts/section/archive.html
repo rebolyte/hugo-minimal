@@ -8,7 +8,9 @@
 			<ul>
 				{{ range .Pages }}
 					{{ if ne .Type "index" }}
-						{{ .Render "li" }}
+						<div class="py-1">
+							{{ .Render "li" }}
+						</div>
 					{{ end }}
 				{{- end }}
 				</ul>
