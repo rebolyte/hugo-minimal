@@ -15,6 +15,24 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Sections"
+            name: "blocks"
+            widget: "list"
+            typeKey: "template"
+            types:
+              - label: "1 Up"
+                name: "1up"
+                widget: object
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Text", name: "content", widget: "markdown" }
+              - label: "2 Up"
+                name: "2up"
+                widget: object
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Left Text", name: "left", widget: "markdown" }
+                  - { label: "Right Text", name: "right", widget: "markdown" }
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
