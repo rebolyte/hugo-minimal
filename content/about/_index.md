@@ -6,13 +6,13 @@ blocks:
     heading: "Feature 1"
     content: |-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. 
-    image: "http://via.placeholder.com/500x280"
+    image: "https://via.placeholder.com/500x280"
     image_position: "right"
   - template: "media-feature"
     heading: "Feature 2"
     content: |-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. 
-    image: "http://via.placeholder.com/500x280"
+    image: "https://via.placeholder.com/500x280"
     image_position: "left"
   - template: "grid-list"
     num_cols: 4

@@ -5,7 +5,7 @@ hero_content: >
   Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 hero_button_text: Contact Us
 hero_button_url: "/contact"
-hero_image: "http://via.placeholder.com/600x450"
+hero_image: "https://via.placeholder.com/600x450"
 content_samples_heading: Try it out here
 latest_blogs_heading: Read some of the latest blogs
 blocks:
@@ -48,7 +48,7 @@ blocks:
     heading: "Find out just how much we can do for you. Let's talk."
     content: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
-    image: "http://via.placeholder.com/600x450"
+    image: "https://via.placeholder.com/600x450"
     image_position: "left"
     button_text: "Contact Us"
     button_url: "/contact/"
