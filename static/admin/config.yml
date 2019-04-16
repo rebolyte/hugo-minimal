@@ -14,7 +14,7 @@ collections:
         file: "content/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
           - label: "Sections"
             name: "blocks"
             widget: "list"
@@ -37,7 +37,7 @@ collections:
                 name: "card-grid"
                 widget: object
                 fields:
-                  - { label: "Columns", name: "num_cols", widget: "number" }
+                  - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 3, min: 1, max: 12 }
                   - label: "Cards"
                     name: "cards"
                     widget: "list"
@@ -91,3 +91,30 @@ collections:
       - { label: "CTA Text", name: "cta_text", widget: "string" }
       - { label: "CTA URL", name: "cta_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "config"
+    label: "Config"
+    files:
+      - label: "Site Config"
+        name: "siteconfig"
+        file: "/data/siteconfig.yaml"
+        fields:
+          - { label: "Copyright", name: "CopyrightHTML", widget: "string" }
+          - { label: "Contact Phone", name: "contact_phone", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Default CTA Heading", name: "default_cta_heading", widget: "string" }
+          - { label: "Default CTA Description", name: "default_cta_desc", widget: "string" }
+          - { label: "Default Narrow CTA Description", name: "default_cta_narrow_desc", widget: "string" }
+          - { label: "Default Narrow CTA Text", name: "default_cta_narrow_text", widget: "string" }
+          - label: "Navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - label: "Social"
+                name: "social"
+                widget: "list"
+                create: true
+                fields:
+                  - { label: "Name", name: "Name", widget: "string" }
+                  - { label: "Weight", name: "Weight", widget: "number" }
+                  - { label: "Icon", name: "Identifier", widget: "string" }
+                  - { label: "URL", name: "URL", widget: "string" }

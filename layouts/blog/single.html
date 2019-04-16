@@ -41,12 +41,12 @@
 			{{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}
 		{{- end -}}
 	{{ else }}
-		{{ $p := (dict "heading" $.Site.Params.default_cta_heading "content" $.Site.Params.default_cta_desc "button_text" "Contact Us" "button_url" (relLangURL "contact/") "bg_dark" true)}}
-		{{ $p2 := (dict "description" $.Site.Params.default_cta_narrow_desc "link_text" $.Site.Params.default_cta_narrow_text "link_url" (relLangURL "contact/")) }}
+		{{ $p := (dict "heading" $.Site.Data.siteconfig.default_cta_heading "content" $.Site.Data.siteconfig.default_cta_desc "button_text" "Contact Us" "button_url" (relLangURL "contact/") "bg_dark" true)}}
+		{{ $p2 := (dict "description" $.Site.Data.siteconfig.default_cta_narrow_desc "link_text" $.Site.Data.siteconfig.default_cta_narrow_text "link_url" (relLangURL "contact/")) }}
 		<div class="min-h-xs flex flex-col justify-center">
 			{{ partial "blocks/action-feature" (dict "Params" $p) }}
 		</div>
-		{{ partial "blocks/narrow-cta" (dict "Params" $p2) }}
+		{{ partial "blocks/narrow-cta" (dict "Params" $p2) }}	
 	{{ end }}
 </div>
 

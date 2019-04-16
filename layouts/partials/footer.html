@@ -16,10 +16,10 @@
             </div>
         </div>
         <div class="relative container px-8 z-10">
-            {{ range .Site.Params.navigation.social -}}
+            {{ range .Site.Data.siteconfig.navigation.social -}}
             <a class="text-white mr-4" href="{{ .URL }}" title="{{ .Name }}">{{ partial "icon" (dict "icon" .Identifier) }}</a>
             {{ end }}
-            <div class="my-4 text-gray-400">{{ .Site.Params.CopyrightHTML | safeHTML }}</div>
+            <div class="my-4 text-gray-400">{{ .Site.Data.siteconfig.CopyrightHTML | safeHTML }}</div>
             <div class="mt-4 mb-8 text-gray-400 opacity-25"><a href="https://grayscale.digital">Site by Grayscale Digital</a></div>
         </div>
     </div>

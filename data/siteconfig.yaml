@@ -1,0 +1,27 @@
+CopyrightHTML: "Copyright &#xA9; 2019 Grayscale Digital LLC"
+default_cta_heading: Try Us Out!
+default_cta_desc: >
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. 
+  Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet.
+default_cta_narrow_desc: Want some human contact?
+default_cta_narrow_text: Really, try contacting us
+contact_phone: "415.555.5555"
+contact_email: "you@site.com"
+navigation:
+  social:
+    - Name: "Reddit"
+      Weight: 1
+      Identifier: "reddit-alien"
+      URL: "https://www.reddit.com/r/funny/"
+    - Name: "Facebook"
+      Weight: 2
+      Identifier: "facebook-square"
+      URL: "https://facebook.com"
+    - Name: "Twitter"
+      Weight: 3
+      Identifier: "twitter"
+      URL: "https://twitter.com/grayscale_digi"
+    - Name: "GitHub"
+      Weight: 4
+      Identifier: "github"
+      URL: "https://github.com/rebolyte"
