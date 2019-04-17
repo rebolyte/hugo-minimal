@@ -26,6 +26,16 @@ collections:
                 fields:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Text", name: "content", widget: "markdown" }
+              - label: "1 Up Media"
+                name: "1up-media"
+                widget: object
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "Type"
+                    name: "content"
+                    widget: "select"
+                    options: ["image", "video"]
+                  - { label: "Image", name: "src", widget: "image", default: "http://via.placeholder.com/500x280" }
               - label: "2 Up"
                 name: "2up"
                 widget: object
@@ -33,6 +43,31 @@ collections:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Left Text", name: "left", widget: "markdown" }
                   - { label: "Right Text", name: "right", widget: "markdown" }
+              - label: "Accordion"
+                name: "accordion"
+                widget: "object"
+                fields:
+                  - label: "Accordion Items"
+                    name: "accordion_items"
+                    widget: "list"
+                    create: true
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "markdown" }
+              - label: "Action Feature"
+                name: "action-feature"
+                widget: object
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image", default: "http://via.placeholder.com/500x280" }
+                  - label: "Alignment"
+                    name: "image_position"
+                    widget: "select"
+                    options: ["left", "right"]
+                  - { label: "Button Text", name: "button_text", widget: "string" }
+                  - { label: "Button URL", name: "button_url", widget: "string" }
+                  - { label: "Dark Background?", name: "bg_dark", widget: "boolean", required: false }
               - label: "Card Grid"
                 name: "card-grid"
                 widget: object
