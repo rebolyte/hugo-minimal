@@ -26,6 +26,7 @@ Hugo will not [rebuild](https://discourse.gohugo.io/t/regenerating-assets-direct
 ## TODO
 
 * Implement some kind of work-around for NetlifyCMS widgets that depend on a field's value (e.g. 
-a media block that displays either an image or a video). See [this issue](https://github.com/netlify/netlify-cms/issues/565).
+a media block that displays either an image or a video, or disabling "image position" selection
+if there is no image). See [this issue](https://github.com/netlify/netlify-cms/issues/565).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2fade68f-423c-44b1-80b5-ce4323ad3b8e/deploy-status)](https://app.netlify.com/sites/hugo-minimal/deploys)

@@ -5,6 +5,9 @@ backend:
 media_folder: "static/images" # Media files will be stored in the repo under static/images
 public_folder: "/images" # The src attribute for uploaded media will begin with /images
 
+# https://learnxinyminutes.com/docs/yaml/
+
+# Define YAML anchor here
 default_block_list: &default_block_list
   - label: "1 Up"
     name: "1up"
@@ -47,7 +50,7 @@ default_block_list: &default_block_list
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Content", name: "content", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
+      - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280", required: false }
       - label: "Image Position"
         name: "image_position"
         widget: "select"
@@ -114,7 +117,7 @@ collections:
             name: "blocks"
             widget: "list"
             typeKey: "template"
-            types: *default_block_list
+            types: *default_block_list # reference YAML anchor
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
