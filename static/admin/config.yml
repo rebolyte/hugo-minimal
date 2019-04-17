@@ -5,6 +5,106 @@ backend:
 media_folder: "static/images" # Media files will be stored in the repo under static/images
 public_folder: "/images" # The src attribute for uploaded media will begin with /images
 
+default_blockloader: &default_blockloader
+  - label: "Blocks"
+    name: "blocks"
+    widget: "list"
+    typeKey: "template"
+    types:
+      - label: "1 Up"
+        name: "1up"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "content", widget: "markdown" }
+      - label: "1 Up Media"
+        name: "1up-media"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Type"
+            name: "content"
+            widget: "select"
+            options: ["image", "video"]
+            default: "image"
+          - { label: "Image", name: "src", widget: "image", default: "https://via.placeholder.com/500x280" }
+      - label: "2 Up"
+        name: "2up"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Left Text", name: "left", widget: "markdown" }
+          - { label: "Right Text", name: "right", widget: "markdown" }
+      - label: "Accordion"
+        name: "accordion"
+        widget: "object"
+        fields:
+          - label: "Accordion Items"
+            name: "accordion_items"
+            widget: "list"
+            create: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Action Feature"
+        name: "action-feature"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
+          - label: "Image Position"
+            name: "image_position"
+            widget: "select"
+            options: ["left", "right"]
+          - { label: "Button Text", name: "button_text", widget: "string" }
+          - { label: "Button URL", name: "button_url", widget: "string" }
+          - { label: "Dark Background?", name: "bg_dark", widget: "boolean", default: false }
+      - label: "Card Grid"
+        name: "card-grid"
+        widget: object
+        fields:
+          - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 3, min: 1, max: 12 }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            create: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button URL", name: "buttonUrl", widget: "string" }
+      - label: "Grid List"
+        name: "grid-list"
+        widget: object
+        fields:
+          - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 4, min: 4, max: 8, step: 2 }
+          - label: "Items"
+            name: "grid_items"
+            widget: "list"
+            create: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+      - label: "Media Feature"
+        name: "media-feature"
+        widget: object
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
+          - label: "Image Position"
+            name: "image_position"
+            widget: "select"
+            options: ["left", "right"]
+      - label: "Narrow CTA"
+        name: "narrow-cta"
+        widget: object
+        fields:
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Link Text", name: "link_text", widget: "string" }
+          - { label: "Link URL", name: "link_url", widget: "string" }
+
 collections:
   - name: "pages"
     label: "Pages"
@@ -15,118 +115,23 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown", required: false }
-          - label: "Blocks"
-            name: "blocks"
-            widget: "list"
-            typeKey: "template"
-            types:
-              - label: "1 Up"
-                name: "1up"
-                widget: object
-                fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
-                  - { label: "Text", name: "content", widget: "markdown" }
-              - label: "1 Up Media"
-                name: "1up-media"
-                widget: object
-                fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
-                  - label: "Type"
-                    name: "content"
-                    widget: "select"
-                    options: ["image", "video"]
-                    default: "image"
-                  - { label: "Image", name: "src", widget: "image", default: "https://via.placeholder.com/500x280" }
-              - label: "2 Up"
-                name: "2up"
-                widget: object
-                fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
-                  - { label: "Left Text", name: "left", widget: "markdown" }
-                  - { label: "Right Text", name: "right", widget: "markdown" }
-              - label: "Accordion"
-                name: "accordion"
-                widget: "object"
-                fields:
-                  - label: "Accordion Items"
-                    name: "accordion_items"
-                    widget: "list"
-                    create: true
-                    fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "markdown" }
-              - label: "Action Feature"
-                name: "action-feature"
-                widget: object
-                fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
-                  - { label: "Content", name: "content", widget: "markdown" }
-                  - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
-                  - label: "Image Position"
-                    name: "image_position"
-                    widget: "select"
-                    options: ["left", "right"]
-                  - { label: "Button Text", name: "button_text", widget: "string" }
-                  - { label: "Button URL", name: "button_url", widget: "string" }
-                  - { label: "Dark Background?", name: "bg_dark", widget: "boolean", default: false }
-              - label: "Card Grid"
-                name: "card-grid"
-                widget: object
-                fields:
-                  - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 3, min: 1, max: 12 }
-                  - label: "Cards"
-                    name: "cards"
-                    widget: "list"
-                    create: true
-                    fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "string" }
-                      - { label: "Button Text", name: "buttonText", widget: "string" }
-                      - { label: "Button URL", name: "buttonUrl", widget: "string" }
-              - label: "Grid List"
-                name: "grid-list"
-                widget: object
-                fields:
-                  - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 4, min: 4, max: 8, step: 2 }
-                  - label: "Items"
-                    name: "grid_items"
-                    widget: "list"
-                    create: true
-                    fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "string" }
-              - label: "Media Feature"
-                name: "media-feature"
-                widget: object
-                fields:
-                  - { label: "Heading", name: "heading", widget: "string" }
-                  - { label: "Content", name: "content", widget: "markdown" }
-                  - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
-                  - label: "Image Position"
-                    name: "image_position"
-                    widget: "select"
-                    options: ["left", "right"]
-              - label: "Narrow CTA"
-                name: "narrow-cta"
-                widget: object
-                fields:
-                  - { label: "Description", name: "description", widget: "string" }
-                  - { label: "Link Text", name: "link_text", widget: "string" }
-                  - { label: "Link URL", name: "link_url", widget: "string" }
+          <<: *default_blockloader
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }          
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          <<: *default_blockloader
       - name: "contact"
         label: "Contact"
         file: "content/contact/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          <<: *default_blockloader
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
@@ -156,7 +161,8 @@ collections:
       - { label: "Splash Image", name: "splash_src", widget: "image", default: "https://via.placeholder.com/500x280" }
       - { label: "CTA Text", name: "cta_text", widget: "string" }
       - { label: "CTA URL", name: "cta_url", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      <<: *default_blockloader
   - name: "config"
     label: "Config"
     files:
