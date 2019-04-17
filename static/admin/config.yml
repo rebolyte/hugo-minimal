@@ -15,7 +15,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown", required: false }
-          - label: "Sections"
+          - label: "Blocks"
             name: "blocks"
             widget: "list"
             typeKey: "template"
@@ -35,7 +35,8 @@ collections:
                     name: "content"
                     widget: "select"
                     options: ["image", "video"]
-                  - { label: "Image", name: "src", widget: "image", default: "http://via.placeholder.com/500x280" }
+                    default: "image"
+                  - { label: "Image", name: "src", widget: "image", default: "https://via.placeholder.com/500x280" }
               - label: "2 Up"
                 name: "2up"
                 widget: object
@@ -60,14 +61,14 @@ collections:
                 fields:
                   - { label: "Heading", name: "heading", widget: "string" }
                   - { label: "Content", name: "content", widget: "markdown" }
-                  - { label: "Image", name: "image", widget: "image", default: "http://via.placeholder.com/500x280" }
-                  - label: "Alignment"
+                  - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
+                  - label: "Image Position"
                     name: "image_position"
                     widget: "select"
                     options: ["left", "right"]
                   - { label: "Button Text", name: "button_text", widget: "string" }
                   - { label: "Button URL", name: "button_url", widget: "string" }
-                  - { label: "Dark Background?", name: "bg_dark", widget: "boolean", required: false }
+                  - { label: "Dark Background?", name: "bg_dark", widget: "boolean", default: false }
               - label: "Card Grid"
                 name: "card-grid"
                 widget: object
@@ -82,6 +83,18 @@ collections:
                       - { label: "description", name: "description", widget: "string" }
                       - { label: "Button Text", name: "buttonText", widget: "string" }
                       - { label: "Button URL", name: "buttonUrl", widget: "string" }
+              - label: "Grid List"
+                name: "grid-list"
+                widget: object
+                fields:
+                  - { label: "Columns", name: "num_cols", widget: "number", valueType: int, default: 4, min: 4, max: 8, step: 2 }
+                  - label: "Items"
+                    name: "grid_items"
+                    widget: "list"
+                    create: true
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "string" }
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
@@ -107,7 +120,7 @@ collections:
       - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Hero Type", name: "hero_type", widget: "select", options: ["image", "video"] }
-      - { label: "Hero Image", name: "hero_src", widget: "image", default: "http://via.placeholder.com/500x280", required: false }
+      - { label: "Hero Image", name: "hero_src", widget: "image", default: "https://via.placeholder.com/500x280", required: false }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -122,7 +135,7 @@ collections:
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Weight", name: "weight", widget: "number" }
       - { label: "Splash Type", name: "splash_type", widget: "select", options: ["image", "video"] }
-      - { label: "Splash Image", name: "splash_src", widget: "image", default: "http://via.placeholder.com/500x280" }
+      - { label: "Splash Image", name: "splash_src", widget: "image", default: "https://via.placeholder.com/500x280" }
       - { label: "CTA Text", name: "cta_text", widget: "string" }
       - { label: "CTA URL", name: "cta_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
