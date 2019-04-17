@@ -2,7 +2,6 @@
 {{- range .Params.blocks -}}
     {{- if eq .template "media-feature" -}}{{ partial "blocks/media-feature" (dict "Params" .) }}{{- end -}}
     {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
-    {{- if eq .template "narrow-feature" -}}{{ partial "blocks/narrow-feature" (dict "Params" .) }}{{- end -}}
     {{- if eq .template "call-to-action" -}}{{ partial "blocks/cta" (dict "Params" .) }}{{- end -}}
     {{- if eq .template "1up" -}}{{ partial "blocks/1up" (dict "Params" .) }}{{- end -}}
     {{- if eq .template "2up" -}}{{ partial "blocks/2up" (dict "Params" .) }}{{- end -}}

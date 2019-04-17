@@ -80,7 +80,7 @@ collections:
                     create: true
                     fields:
                       - { label: "Title", name: "title", widget: "string" }
-                      - { label: "description", name: "description", widget: "string" }
+                      - { label: "Description", name: "description", widget: "string" }
                       - { label: "Button Text", name: "buttonText", widget: "string" }
                       - { label: "Button URL", name: "buttonUrl", widget: "string" }
               - label: "Grid List"
@@ -95,6 +95,24 @@ collections:
                     fields:
                       - { label: "Title", name: "title", widget: "string" }
                       - { label: "Description", name: "description", widget: "string" }
+              - label: "Media Feature"
+                name: "media-feature"
+                widget: object
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image", default: "https://via.placeholder.com/500x280" }
+                  - label: "Image Position"
+                    name: "image_position"
+                    widget: "select"
+                    options: ["left", "right"]
+              - label: "Narrow CTA"
+                name: "narrow-cta"
+                widget: object
+                fields:
+                  - { label: "Description", name: "description", widget: "string" }
+                  - { label: "Link Text", name: "link_text", widget: "string" }
+                  - { label: "Link URL", name: "link_url", widget: "string" }
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
