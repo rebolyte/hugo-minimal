@@ -109,7 +109,7 @@ default_section_widget: &default_section_widget
   widget: "list"
   create: true
   fields:
-    - { label: "Container Class", name: "container_class", widget: "string" }
+    - { label: "Container Class", name: "container_class", widget: "string", required: false }
     - label: "Blocks"
       name: "blocks"
       widget: "list"
