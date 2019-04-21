@@ -7,7 +7,7 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 
 # https://learnxinyminutes.com/docs/yaml/
 
-# Define YAML anchor here
+# Define YAML anchors here
 default_block_list: &default_block_list
   - label: "1 Up"
     name: "1up"
@@ -104,6 +104,17 @@ default_block_list: &default_block_list
       - { label: "Link Text", name: "link_text", widget: "string" }
       - { label: "Link URL", name: "link_url", widget: "string" }
 
+default_section_widget: &default_section_widget
+  name: "sections"
+  widget: "list"
+  create: true
+  fields:
+    - label: "Blocks"
+      name: "blocks"
+      widget: "list"
+      typeKey: "template"
+      types: *default_block_list # reference YAML anchor
+
 collections:
   - name: "pages"
     label: "Pages"
@@ -114,11 +125,8 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown", required: false }
-          - label: "Blocks"
-            name: "blocks"
-            widget: "list"
-            typeKey: "template"
-            types: *default_block_list # reference YAML anchor
+          - label: "Sections"
+            <<: *default_section_widget
       - name: "about"
         label: "about"
         file: "content/about/_index.md"
@@ -126,11 +134,8 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }          
           - { label: "Body", name: "body", widget: "markdown", required: false }
-          - label: "Blocks"
-            name: "blocks"
-            widget: "list"
-            typeKey: "template"
-            types: *default_block_list
+          - label: "Sections"
+            <<: *default_section_widget
       - name: "contact"
         label: "Contact"
         file: "content/contact/_index.md"
@@ -138,11 +143,8 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown", required: false }
-          - label: "Blocks"
-            name: "blocks"
-            widget: "list"
-            typeKey: "template"
-            types: *default_block_list
+          - label: "Sections"
+            <<: *default_section_widget
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
@@ -173,11 +175,8 @@ collections:
       - { label: "CTA Text", name: "cta_text", widget: "string" }
       - { label: "CTA URL", name: "cta_url", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-      - label: "Blocks"
-        name: "blocks"
-        widget: "list"
-        typeKey: "template"
-        types: *default_block_list
+      - label: "Sections"
+        <<: *default_section_widget
   - name: "config"
     label: "Config"
     files:
