@@ -17,7 +17,7 @@
         {{ end }}
     </div>
 
-    {{ partial "blockloader" . }}
+    {{ partial "blockloader" (dict "page" .Params) }}
 
 
 </div>

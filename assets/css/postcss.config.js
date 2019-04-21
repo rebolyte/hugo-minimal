@@ -20,10 +20,10 @@ module.exports = {
         }
       ], 
       fontFace: true,
+      whitelist: ['blockquote', 'pre', 'code', 'table', 'th', 'tr', 'td', 'ul', 'ol'],
       // Target all classes here that are dynamically assembled somewhere in a template,
 			// e.g. with `grid-columns-{{ .Params.num_cols }}`
 			// TODO: Revisit this!
-      whitelist: ['blockquote', 'pre', 'code', 'table', 'th', 'tr', 'td', 'ul', 'ol'],
       whitelistPatterns: [/grid-columns/]
     }) 
   ]

@@ -12,6 +12,6 @@
     </section>
 {{ end }}
 
-{{ partial "blockloader" . }}
+{{ partial "blockloader" (dict "page" .Params) }}
 
 {{ end }}

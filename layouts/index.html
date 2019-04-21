@@ -25,18 +25,8 @@
         <polygon fill="#f1f5f8" points="0,100 100,0 100,100"/>
     </svg>
 </section>
-  
-    <!-- Use page-specific blockloader, since we need to divide up some sections -->
-    {{- range .Params.blocks -}}
-        {{- if eq .template "media-feature" -}}{{ partial "blocks/media-feature" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "call-to-action" -}}{{ partial "blocks/cta" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "1up" -}}{{ partial "blocks/1up" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "2up" -}}{{ partial "blocks/2up" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "1up-media" -}}{{ partial "blocks/1up-media" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "card-grid" -}}{{ partial "blocks/card-grid" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "grid-list" -}}{{ partial "blocks/grid-list" (dict "Params" .) }}{{- end -}}
-        {{- if eq .template "accordion" -}}{{ partial "blocks/accordion" (dict "Params" .) }}{{- end -}}        
-    {{- end -}}
+
+    {{ partial "blockloader" (dict "page" .Params "startSection" 1 "include" 1) }}
 
     <section class="py-4">
 		<div class="container mx-auto flex flex-col items-center px-4">
@@ -49,27 +39,21 @@
 
     {{ .Content }}
 
-
     <section class="py-4">
-            <div class="container mx-auto flex flex-col items-center px-4">
-                <div class="inline-block mb-4">
-                    <h3 class="font-semibold text-2xl text-theme-primary text-center ctr-title-underline">{{ .Params.latest_blogs_heading }}</h3>
-                </div>
-                <div class="mx-auto card max-w-2xl">
-                    {{ range first 4 (where .Data.Pages.ByDate.Reverse "Section" "blog") }}
-                    <div class="content-li">
-                        {{ .Render "li" }}
-                    </div>
-                    {{ end }}
-                </div>
+        <div class="container mx-auto flex flex-col items-center px-4">
+            <div class="inline-block mb-4">
+                <h3 class="font-semibold text-2xl text-theme-primary text-center ctr-title-underline">{{ .Params.latest_blogs_heading }}</h3>
             </div>
-        </section>
+            <div class="mx-auto card max-w-2xl">
+                {{ range first 4 (where .Data.Pages.ByPublishDate.Reverse "Section" "blog") }}
+                <div class="content-li">
+                    {{ .Render "li" }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
 
-    <div class="bg-theme-gradient-reverse w-full mt-12">
-        {{- range .Params.blocks -}}
-            {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
-            {{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}
-        {{- end -}}
-    </div>
+    {{ partial "blockloader" (dict "page" .Params "startSection" 2) }}
 
 {{ end }}

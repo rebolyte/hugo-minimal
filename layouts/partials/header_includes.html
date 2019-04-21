@@ -5,6 +5,7 @@
     {{ $style := resources.Get "css/main.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"> 
 {{ end }}
+{{/*  <style>{{ partial "debugprint.css" | safeCSS }}</style>  */}}
 {{ if eq .Section "blog" }}
     <!-- section-specific includes -->
 {{ end }}

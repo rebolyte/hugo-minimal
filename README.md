@@ -23,6 +23,18 @@ Hugo will not [rebuild](https://discourse.gohugo.io/t/regenerating-assets-direct
 - PurgeCSS will fail if any of your templates are empty.
 - If you add themes, you need to add the file location in the PurgeCSS `content` configuration item.
 
+## Useful things
+
+[Embed Responsively](http://embedresponsively.com/) will give you YouTube/Vimeo embed codes that work responsively (see 1up-media.html template partial for example).
+
+Photos are not automatically resized when added through Netlify CMS, so resize/crush them before uploading.
+
+Getting familiar with [Go templates](https://golang.org/pkg/text/template/) is very handy for working with Hugo. Here's a [good tutorial](https://code.tutsplus.com/tutorials/text-generation-with-go-templates--cms-30441).
+
+Pretty printing Hugo variables for debug: https://github.com/kaushalmodi/hugo-debugprint
+
+Find the right syntax for your YAML multiline strings - https://yaml-multiline.info/
+
 ## TODO
 
 * Implement some kind of work-around for NetlifyCMS widgets that depend on a field's value (e.g. 
