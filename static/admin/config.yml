@@ -125,6 +125,13 @@ collections:
         file: "content/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hero Heading", name: "hero_heading", widget: "string" }
+          - { label: "Hero Content", name: "hero_content", widget: "markdown" }
+          - { label: "Hero Button Text", name: "hero_button_text", widget: "string" }
+          - { label: "Hero Button URL", name: "hero_button_url", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "Content Samples Heading", name: "content_samples_heading", widget: "string" }
+          - { label: "Latest Blogs Heading", name: "latest_blogs_heading", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown", required: false }
           - label: "Sections"
             <<: *default_section_widget
